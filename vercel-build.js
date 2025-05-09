@@ -1,7 +1,12 @@
-// CommonJS format for better compatibility with Vercel
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+// ES Module format for compatibility with Vercel and package.json type: module
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Get current directory (equivalent to __dirname in CommonJS)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Ensure dist directory exists
 if (!fs.existsSync('dist')) {
