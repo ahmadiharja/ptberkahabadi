@@ -5,45 +5,66 @@ import { Quote } from "lucide-react";
 const ambassadors = [
   {
     id: 1,
-    name: "KH Kholiq Amrulloh",
-    position: "Wakil Jatman Nasional",
-    testimonial: "Dulu saya selalu sesak napas setelah merokok, sekarang setelah rutin pakai DK, dada terasa lebih ringan.",
-    image: "https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    name: "Gus Iqdam",
+    position: "Pengasuh Majelis Ta'lim Sabilu Taubah",
+    testimonial: "Dulu saya selalu sesak napas setelah merokok, sekarang setelah rutin pakai VB Pro Nusantara, dada terasa lebih ringan.",
+    image: "/assets/images/ambassador/gusiqdam.jpeg"
   },
   {
     id: 2,
-    name: "KH. Muhammad Najmuddin Jamha",
-    position: "Pengasuh PP. Baitul Abidin, Balongrejo, Badas, Kediri",
-    testimonial: "Setelah coba VBPRO, saya merasakan tubuh lebih bugar, tidak gampang capek, dan lebih semangat kerja.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    name: "KH Kholiq Amrulloh",
+    position: "Wakil Jatman Nasional",
+    testimonial: "Semenjak rutin pakai VBPRO, daya tahan tubuh saya lebih baik, jarang sakit.",
+    image: "/assets/images/ambassador/KHKholiqAmrulloh.jpg"
   },
   {
     id: 3,
-    name: "KH. Khafid Baihaqi",
-    position: "Pemuka Agama",
-    testimonial: "Semenjak rutin pakai VBPRO, daya tahan tubuh saya lebih baik, jarang sakit.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    name: "KH. Muhammad Najmuddin Jamha",
+    position: "Pengasuh PP. Baitul Abidin, Badas Kediri",
+    testimonial: "Setelah coba VBPRO, saya merasakan tubuh lebih bugar, tidak gampang capek, dan lebih semangat kerja.",
+    image: "/assets/images/ambassador/KHMuhammadNajmuddinJamha.jpeg"
   },
   {
     id: 4,
-    name: "Gus Hendrik",
+    name: "KH. Khafid Baihaqi",
     position: "Pemuka Agama",
-    testimonial: "Saya bisa tetap merokok tanpa khawatir tentang efek samping pada tubuh.",
-    image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    testimonial: "Semenjak rutin pakai VBPRO, daya tahan tubuh saya lebih baik, jarang sakit.",
+    image: "/assets/images/ambassador/KHKhafidBaihaqi.jpeg"
   },
   {
     id: 5,
-    name: "Cecep Eman Sulaeman S.Hi M.H",
-    position: "Praktisi Ruqyah",
-    testimonial: "Setelah pakai VBPRO, saya tidak merasa cepat capek saat naik tangga atau jalan jauh.",
-    image: "https://images.unsplash.com/photo-1584043720379-b56cd9199c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    name: "Gus Hendrik",
+    position: "Pemuka Agama",
+    testimonial: "Saya bisa tetap merokok tanpa khawatir tentang efek samping pada tubuh.",
+    image: "/assets/images/ambassador/GusHendrik.jpeg"
   },
   {
     id: 6,
+    name: "Cecep Eman Sulaeman S.Hi M.H",
+    position: "Praktisi Ruqyah",
+    testimonial: "Setelah pakai VBPRO, saya tidak merasa cepat capek saat naik tangga atau jalan jauh.",
+    image: "/assets/images/ambassador/CecepEmanSulaeman.jpeg"
+  },
+  {
+    id: 7,
     name: "KH Ahmad Zubaidi",
     position: "Ketua Thoriqoh Pondok Kencong Kepung Kediri",
-    testimonial: "Gula darah saya lebih stabil sejak saya mengganti rokok biasa ke DK.",
-    image: "https://images.unsplash.com/photo-1561677843-39dee7a319ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    testimonial: "Gula darah saya lebih stabil sejak saya mengganti rokok biasa ke VB Pro.",
+    image: "/assets/images/ambassador/KHAhmadZubaidi.jpeg"
+  },
+  {
+    id: 8,
+    name: "KH. Jauhar Nehru",
+    position: "Pengasuh Ponpes Roudhotul Ulum Kencong, Kepung Kediri",
+    testimonial: "VB Pro Nusantara memberi saya pengalaman merokok yang lebih sehat. Sebagai pengasuh pesantren, saya juga senang mendukung produk yang bermanfaat bagi umat.",
+    image: "/assets/images/ambassador/KHJAUHARNEHRU.jpg"
+  },
+  {
+    id: 9,
+    name: "KH. Rofiudin Jogoroto Jombang",
+    position: "Pemuka Agama",
+    testimonial: "Alhamdulillah, sejak menggunakan VB Pro Nusantara, saya bisa tetap fokus dalam berdakwah tanpa gangguan batuk dan sesak nafas yang sering saya alami sebelumnya.",
+    image: "/assets/images/ambassador/KHROFIUDDINJOGOROTOJOMBANG.jpg"
   }
 ];
 

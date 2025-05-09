@@ -12,6 +12,8 @@ import Login from "@/pages/login";
 import Member from "@/pages/member";
 import Program from "@/pages/program";
 import Products from "@/pages/products";
+import Affiliasi from "@/pages/affiliasi";
+import ProductDetail from "@/pages/product-detail";
 import Header from "@/components/header";
 
 function Router() {
@@ -19,7 +21,9 @@ function Router() {
     <Switch>
       <Route path="/" component={Home}/>
       <Route path="/products" component={Products}/>
+      <Route path="/products/:slug" component={ProductDetail}/>
       <Route path="/program" component={Program}/>
+      <Route path="/affiliasi" component={Affiliasi}/>
       <Route path="/ambassador" component={Ambassador}/>
       <Route path="/donasi" component={Donasi}/>
       <Route path="/tentang-kami" component={TentangKami}/>

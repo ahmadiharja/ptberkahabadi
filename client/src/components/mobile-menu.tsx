@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
+import { ChevronDown } from "lucide-react";
 import { RegistrationModal } from "./registration-modal";
 
 interface MobileMenuProps {
@@ -36,6 +37,7 @@ export function MobileMenu({ isOpen, toggleMenu }: MobileMenuProps) {
   const [location] = useLocation();
   const isMemberArea = location.startsWith("/member");
   const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
+  const [isProgramSubMenuOpen, setIsProgramSubMenuOpen] = useState(false);
   
   const handleLinkClick = () => {
     toggleMenu();
@@ -48,6 +50,10 @@ export function MobileMenu({ isOpen, toggleMenu }: MobileMenuProps) {
 
   const handleCloseRegistrationModal = () => {
     setIsRegistrationModalOpen(false);
+  };
+
+  const toggleProgramSubMenu = () => {
+    setIsProgramSubMenuOpen(!isProgramSubMenuOpen);
   };
 
   return (
@@ -72,40 +78,50 @@ export function MobileMenu({ isOpen, toggleMenu }: MobileMenuProps) {
           >
             Produk
           </Link>
+          
+          {/* Program with submenu */}
+          <div>
+            <button
+              onClick={toggleProgramSubMenu}
+              className="flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-[var(--light-100)] hover:bg-[var(--dark-700)] hover:text-[var(--accent-green)] transition-colors duration-200"
+            >
+              <span>Program</span>
+              <ChevronDown className={`h-5 w-5 transition-transform ${isProgramSubMenuOpen ? "rotate-180" : ""}`} />
+            </button>
+            
+            {isProgramSubMenuOpen && (
+              <div className="pl-4 space-y-1 border-l border-[var(--dark-700)] ml-3">
+                <Link 
+                  href="/affiliasi" 
+                  onClick={handleLinkClick}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-[var(--light-100)] hover:bg-[var(--dark-700)] hover:text-[var(--accent-green)] transition-colors duration-200"
+                >
+                  Affiliasi
+                </Link>
+                <Link 
+                  href="/ambassador" 
+                  onClick={handleLinkClick}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-[var(--light-100)] hover:bg-[var(--dark-700)] hover:text-[var(--accent-green)] transition-colors duration-200"
+                >
+                  Ambassador
+                </Link>
+                <Link 
+                  href="/donasi" 
+                  onClick={handleLinkClick}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-[var(--light-100)] hover:bg-[var(--dark-700)] hover:text-[var(--accent-green)] transition-colors duration-200"
+                >
+                  Donasi
+                </Link>
+              </div>
+            )}
+          </div>
+          
           <Link 
-            href="/program" 
-            onClick={handleLinkClick}
-            className="block px-3 py-2 rounded-md text-base font-medium text-[var(--light-100)] hover:bg-[var(--dark-700)] hover:text-[var(--accent-green)] transition-colors duration-200"
-          >
-            Program
-          </Link>
-          <Link 
-            href="/ambassador" 
-            onClick={handleLinkClick}
-            className="block px-3 py-2 rounded-md text-base font-medium text-[var(--light-100)] hover:bg-[var(--dark-700)] hover:text-[var(--accent-green)] transition-colors duration-200"
-          >
-            Ambassador
-          </Link>
-          <Link 
-            href="/donasi" 
-            onClick={handleLinkClick}
-            className="block px-3 py-2 rounded-md text-base font-medium text-[var(--light-100)] hover:bg-[var(--dark-700)] hover:text-[var(--accent-green)] transition-colors duration-200"
-          >
-            Donasi
-          </Link>
-          <Link 
-            href="/about" 
+            href="/tentang-kami" 
             onClick={handleLinkClick}
             className="block px-3 py-2 rounded-md text-base font-medium text-[var(--light-100)] hover:bg-[var(--dark-700)] hover:text-[var(--accent-green)] transition-colors duration-200"
           >
             Tentang Kami
-          </Link>
-          <Link 
-            href="/contact" 
-            onClick={handleLinkClick}
-            className="block px-3 py-2 rounded-md text-base font-medium text-[var(--light-100)] hover:bg-[var(--dark-700)] hover:text-[var(--accent-green)] transition-colors duration-200"
-          >
-            Kontak
           </Link>
           
           {!isMemberArea && (

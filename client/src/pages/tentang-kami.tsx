@@ -1,5 +1,7 @@
 import { Container } from "@/components/ui/container";
-import { FileText, Award, Briefcase, CheckSquare, Users, BarChart3, Map, ShoppingBag } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { FileText, Award, Briefcase, CheckSquare, Users, BarChart3, Map, ShoppingBag, MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function TentangKami() {
   return (
@@ -202,6 +204,95 @@ export default function TentangKami() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Information and Form Section - Added from contact.tsx */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-light text-center mb-10">Hubungi Kami</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Contact Info */}
+              <div className="bg-[var(--dark-800)] p-8 rounded-xl">
+                <h3 className="text-2xl font-light mb-8">Informasi Kontak</h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 rounded-full bg-[var(--accent-green)] bg-opacity-10 flex items-center justify-center mr-4 flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-[var(--accent-green)]" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-white mb-2">Alamat</h4>
+                      <p className="text-[var(--dark-400)]">
+                        Jl. Kutilang 159 RT 002 RW 003, Desa Lamong, Kec.Badas, Kab. Kediri, Jawa Timur
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 rounded-full bg-[var(--accent-green)] bg-opacity-10 flex items-center justify-center mr-4 flex-shrink-0">
+                      <Phone className="h-6 w-6 text-[var(--accent-green)]" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-white mb-2">Telepon</h4>
+                      <p className="text-[var(--dark-400)]">+62 815 5648 8346</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 rounded-full bg-[var(--accent-green)] bg-opacity-10 flex items-center justify-center mr-4 flex-shrink-0">
+                      <Mail className="h-6 w-6 text-[var(--accent-green)]" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-white mb-2">Email</h4>
+                      <p className="text-[var(--dark-400)]">okegasindonesiaemas@gmail.com</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="w-12 h-12 rounded-full bg-[var(--accent-green)] bg-opacity-10 flex items-center justify-center mr-4 flex-shrink-0">
+                      <Clock className="h-6 w-6 text-[var(--accent-green)]" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-medium text-white mb-2">Jam Operasional</h4>
+                      <p className="text-[var(--dark-400)]">Senin - Jumat: 09:00 - 17:00 WIB</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Form */}
+              <div className="bg-[var(--dark-800)] p-8 rounded-xl">
+                <h3 className="text-2xl font-light mb-8">Kirim Pesan</h3>
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label className="text-sm text-[var(--dark-400)]">Nama</label>
+                      <Input placeholder="Nama lengkap" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm text-[var(--dark-400)]">Email</label>
+                      <Input type="email" placeholder="Email" />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm text-[var(--dark-400)]">Subjek</label>
+                    <Input placeholder="Subjek pesan" />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm text-[var(--dark-400)]">Pesan</label>
+                    <Textarea placeholder="Tulis pesan Anda di sini..." className="min-h-[150px]" />
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    className="w-full px-8 py-3 bg-[var(--accent-green)] hover:bg-opacity-90 text-white rounded-md font-medium transition-all"
+                  >
+                    Kirim Pesan
+                  </button>
+                </form>
               </div>
             </div>
           </div>
